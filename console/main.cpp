@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 			bytecode[reading]=byte;
 			reading++;
 		}
-		vm->interpreter(bytecode,7);
+		vm->interpreter(bytecode,reading);
 	}
 	
 	return 0;
