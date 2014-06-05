@@ -1,0 +1,8 @@
+PROJECT(FlopFlipConsole)
+
+FILE(GLOB FlopFlipConsole_SRC ${PROJECT_SOURCE_DIR}/*.cpp)
+
+ADD_EXECUTABLE(FlopFlipConsole ${FlopFlipConsole_SRC})
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/../vm)
+TARGET_LINK_LIBRARIES(FlopFlipConsole FlopFlipVM_STATIC)
+INSTALL(TARGETS FlopFlipConsole DESTINATION bin)
