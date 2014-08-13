@@ -1,0 +1,20 @@
+#.travis.yml
+#http://travis-ci.org
+##3rd party services
+# Travis, AppVeyor, CodeClimate, Drone.io, Jenkins
+
+language: cpp
+compiler:
+ - gcc
+ - clang
+script: mkdir build && cd build && cmake .. && make
+install: sudo apt-get update 
+notifications:
+ irc:
+  channels:
+   - "chat.freenode.net#flop-flip"
+  template:
+   - "%{repository}/%{branch} (%{commit} - %{author}): %{message}"
+os:
+ - linux
+ - osx
